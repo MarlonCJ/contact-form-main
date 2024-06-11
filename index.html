@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="css/style.css">
+  <title>Contact form</title>
+
+</head>
+<body>
+
+  <main class="main">
+    <h1>Contact Us</h1>
+    <form class="form" action="" id="formulario" novalidate>
+      <!-- text -->
+       <div class="form__row">
+          <div class="form__col">
+            <label for="name">First Name</label><br>
+            <input class="form__input-text" type="text" name="name" id="name" required>
+            <div class="error-message" id="name-error"></div>
+          </div>  
+          <div class="form__col">
+            <label for="lastname">Last Name</label><br>
+            <input class="form__input-text" type="text" name="lastname" id="lastname" required>
+            <div class="error-message" id="lastname-error"></div>
+          </div>  
+       </div> 
+       <!-- email -->
+       <div class="form__row">
+          <div class="form__col form__col--email">
+            <label for="email">Email Address</label><br>
+            <input class="form__input-email" type="email" name="email" id="email" required>
+            <div class="error-message" id="email-error"></div>
+          </div>
+      </div>
+      <!-- radio -->
+      <label for="query">Query Type</label>
+      <div class="form__row form__row--radio">
+        <div class="form__col">
+          <button class="form__btn" type="button" onclick="activateRadio('general')">
+            <input type="radio" name="enquiry" id="general" required> General Enquiry
+          </button>
+          <div class="error-message" id="general-error"></div>
+        </div>
+        <div class="form__col">
+          <button class="form__btn" type="button" onclick="activateRadio('support')">
+            <input type="radio" name="enquiry" id="support" required> Support Request
+          </button>
+          <div class="error-message" id="support-error"></div>
+        </div>
+      </div>
+      <!-- message -->
+      <div class="form__row">
+          <div class="form__col form__col--textarea">
+            <label for="message">Message</label><br>
+            <textarea class="form__textarea" name="message" id="message" required></textarea>
+            <div class="error-message" id="message-error"></div>
+          </div>
+      </div>
+      <!-- terms -->
+      <div class="form__row form__row--check">
+          <div class="form__col form__col--check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I consent to being contacted by the team</label>
+            <div class="error-message" id="consent-error"></div>
+          </div>     
+      </div>
+      <!-- submit -->
+      <div class="form__row">
+          <div class="form__col form__col--submit">
+              <input class="form__btn-submit" type="submit" value="Submit">
+          </div>
+      </div>
+    </form>
+  </main>
+ 
+  <script src="js/script.js"></script>
+</body>
+</html>

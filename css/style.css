@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+
+    /* colors */
+    --color1: hsl(148, 38%, 91%);
+    --color2: hsl(169, 82%, 27%);
+    --color3: hsl(0, 66%, 54%);
+    --color4: hsl(0, 0%, 100%);
+    --color5: hsl(186, 15%, 59%);
+    --color6:  hsl(187, 24%, 22%);
+
+    /* font */
+
+    --font: "Karla", sans-serif;;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--color1);
+}
+
+button{
+    font-family: var(--font);
+}
+
+.main{
+    width: 90%;
+    background-color: var(--color4);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h1{
+    font-size: 24px;
+}
+
+.form__row{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__col{
+    flex: 0 0 100%;
+}
+
+label{
+    display: inline-block;
+    padding: 10px 0;
+}
+
+
+.form__col input[type="text"], input[type="email"] {
+    border: 1px solid var(--color5); 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px; 
+    outline: none; 
+    cursor: pointer;
+  }
+  
+.form__col  input[type="checkbox"]{
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.form__col input[type="text"]:focus {
+    border-color: var(--color2); 
+}
+
+
+.form__col input:focus{
+    color: var(--color2);
+    border: 1px solid var(--color2);
+}
+
+.form__input-text, .form__input-email {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 10px;
+}
+
+.form__row--radio{
+    margin: 10px 0;
+    gap: 14px;
+}
+
+.form__btn{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color5); 
+    cursor: pointer;
+    background-color: var(--color4);
+}
+
+.form__btn:hover{
+    background-color: var(--color1);
+}
+
+.form__textarea{
+    border: 1px solid var(--color5); 
+    border-radius: 10px; 
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    resize: vertical;
+}
+
+
+.form__textarea:focus {
+    border-color: var(--color2);
+}
+
+
+.form__row--check{
+    margin: 10px 0;
+}
+
+.form__col--check{
+    display: flex;
+    align-items: center;
+}
+
+.form__col input[type="checkbox"]{
+    margin-right: 10px;
+    
+}
+
+.form__col input[type="checkbox"]{
+    color: var(--color2);
+}
+
+.form__btn-submit{
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.error-message {
+    color: red;
+    /* display: none;  */
+}
+
+@media screen and (min-width:800px){
+
+    .main{
+        width: 50%;
+        max-width: 600px;
+    }
+
+    .form__row{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .form__col{
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .form__col--email, .form__col--textarea, .form__col--check, .form__col--submit{
+        flex: 0 0 100%;
+    }
+
+}
